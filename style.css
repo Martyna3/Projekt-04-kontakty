@@ -12,6 +12,13 @@ h1 {
 
 .foto {
 	border-radius: 50%;
+	width: 50%;
+	margin: 5px;
+	max-width: 200px ;
+}
+
+.image {
+	width: 100%;
 }
 
 .tym {
@@ -20,26 +27,50 @@ h1 {
 }
 
 .osoba {
+	width: 100%;
 	border: 2px solid lightgray;
 	border-radius: 10px;
-	padding: 10px;
 	box-shadow: 0 2px lightblue;	
 	flex: 1 1 100%;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+
+.popis{
+	width: 100%;
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 1000px){
 
 	.osoba {
-		flex: 1 1 calc(100%/2);
+		display: flex;
+		flex: 1 1 calc(100%/2 - 5%);
+	}
+
+	.image{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 40%;
+	
+	.foto {
+		width: 80%;
+	}
 	}
 } 
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
 
 	.osoba {
-		flex: 1 1 25%;
+		flex: 1 1 calc(100%/4 - 5%);
 	}
 
+	.image{
+		width: 100%;
+	}
+}
 
-} 
+
